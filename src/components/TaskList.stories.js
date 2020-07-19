@@ -1,15 +1,15 @@
 import React from "react";
 
-import Button from "./Button";
+import Tasks from "./Tasks";
 import { Provider } from "react-redux";
 
 import store from "./lib/redux";
 
 export default {
-  component: Button,
+  component: Tasks,
   title: "Redux Todo List",
   excludeStories: /.*Data$/,
   decorators: [(story) => <Provider store={store}>{story()}</Provider>],
 };
 
-export const Default = () => <Button />;
+export const Default = () => <Tasks />;
